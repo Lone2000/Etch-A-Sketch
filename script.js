@@ -5,32 +5,23 @@
 
 
 // Step Grid Container
-const containerG = document.querySelector(".containergrid");
+const container  = document.createElement('div')
+container.setAttribute('id', 'container')
 
 
 // Step: Create Div's
-function createDiv(rows, cols){
+// function createGrid(num){
+//     const div = document.createElement('div');
+//     containerG.appendChild(div);
 
-    for(let i=0;i<=rows;i++){
-        for(let i=0;i<=cols -1 ;i++){
-            const div = document.createElement('div');
-            div.classList.add('square')
-            // appends the grid col/row into the container
-            containerG.appendChild(div);
-        }
-    }
-
-}
-
-// Step: Change Color on Hover
-function sample(color){
-    const gridBlocks = document.querySelectorAll('.square');
-    
-    gridBlocks.forEach(block => block.addEventListener('mouseover', (e)=>{
-        e.target.style.backgroundColor = color;
-    }))
-}
+//     div.classList.add()
+// }
 
 
-createDiv(16,16);
-sample('red');
+
+
+
+
+
+// Add to DOM
+document.body.appendChild(container);

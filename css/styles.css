@@ -1,40 +1,17 @@
-body{
+*{
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+}
+body{
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     height: 100vh;
 }
 
-div.container{
-    display: flex;
-    justify-content: space-evenly;
+#container{
+    height: 430px;
+    width: 430px;
+    background-color: red;
 }
-
-
-div.tools{
-    width: 200px;
-    height: 200px;
-    background-color: yellow;
-    margin: auto 10px;
-
-}
-
-div.containergrid{
-    width: 600px;
-    height: 600px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space;
-}
-
-
-.square{
-    width: 30px;
-    height: 30px;
-    background-color: blue;
-    border: 3px black solid;
-}
-
