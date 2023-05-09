@@ -4,11 +4,11 @@
 // Div is divided into 16 pieces horizontally and vertically
 
 
-// Step 1: Grid Container
+// Step Grid Container
 const containerG = document.querySelector(".containergrid");
 
 
-// Step 2: Create Div's
+// Step: Create Div's
 function createDiv(rows, cols){
 
     for(let i=0;i<=rows;i++){
@@ -22,4 +22,15 @@ function createDiv(rows, cols){
 
 }
 
+// Step: Change Color on Hover
+function sample(color){
+    const gridBlocks = document.querySelectorAll('.square');
+    
+    gridBlocks.forEach(block => block.addEventListener('mouseover', (e)=>{
+        e.target.style.backgroundColor = color;
+    }))
+}
+
+
 createDiv(16,16);
+sample('red');
