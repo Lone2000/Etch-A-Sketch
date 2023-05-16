@@ -1,17 +1,23 @@
 *{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-#container{
-    height: 430px;
-    width: 430px;
-    background-color: red;
+
+
+.container{
+	display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    width: 980px; /* Adjust width as needed */
+    height: 320px; /* Adjust height as needed */
+}
+
+
+.box{
+	background-color: #ccc;
+    border: 1px solid #000;
+    text-align: center;
+    padding: 10px;
 }

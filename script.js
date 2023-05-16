@@ -1,27 +1,33 @@
-//Grid
+// Create a webpage with a 16x16 grid of square divs.
 
-// Create a div, add it to the html body
-// Div is divided into 16 pieces horizontally and vertically
-
-
-// Step Grid Container
-const container  = document.createElement('div')
-container.setAttribute('id', 'container')
+// Grab the container
+let container = document.querySelector(".container");
 
 
-// Step: Create Div's
-// function createGrid(num){
-//     const div = document.createElement('div');
-//     containerG.appendChild(div);
+// Create div function
 
-//     div.classList.add()
+// function createDiv(){
+
+//     for(let i =0; i < 16; i++){
+//         for(let j =0; j < 16; j++){
+//             let div = document.createElement('div');
+//             div.classList.add("box");
+//             div.textContent = "Grid";
+//             container.appendChild(div);
+//         }
+//     }
 // }
 
+function createDiv() {
+    
+    for (let i = 0; i < 16; i++) {
+        for (let j = 0; j < 16; j++) {
+        let div = document.createElement('div');
+        div.classList.add("box");
+        div.textContent = "Grid";
+        container.appendChild(div);
+      }
+    }
+  }
 
-
-
-
-
-
-// Add to DOM
-document.body.appendChild(container);
+createDiv();
