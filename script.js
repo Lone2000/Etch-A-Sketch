@@ -47,11 +47,26 @@ function handleGridSizeChange(){
 
 
 // Hover Additional Class Addition
-let boxes = container.querySelectorAll("div.box")
 
 
-boxes.forEach((box) =>{
-  box.addEventListener("mouseover", (event)=>{
-    event.target.classList.add("change");
-  })
+
+
+
+
+// Listen to color change
+let buttons = document.querySelectorAll("button");
+
+buttons.forEach( (button) =>{
+  button.addEventListener('click', (event)=>{
+    let color = event.target.value
+    // Handle Color change logic
+    let boxes = container.querySelectorAll("div.box")
+
+    boxes.forEach((box) =>{
+      box.addEventListener("mouseover", (event)=>{
+        event.target.style.backgroundColor = color;
+
+      })
+    });
+  });
 });
