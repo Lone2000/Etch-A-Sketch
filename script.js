@@ -4,21 +4,8 @@
 let container = document.querySelector(".container");
 
 
-// Create div function
-
-// function createDiv(){
-
-//     for(let i =0; i < 16; i++){
-//         for(let j =0; j < 16; j++){
-//             let div = document.createElement('div');
-//             div.classList.add("box");
-//             div.textContent = "Grid";
-//             container.appendChild(div);
-//         }
-//     }
-// }
-
-function createDiv(gridSize) {
+// Creating Grid 
+function createDiv(gridSize=16) {
 
     // Clear previous grid
     while (container.firstChild) {
@@ -30,7 +17,6 @@ function createDiv(gridSize) {
         for (let j = 0; j < gridSize; j++) {
         let div = document.createElement('div');
         div.classList.add("box");
-        div.textContent = "Grid";
         container.appendChild(div);
       }
     }
@@ -40,6 +26,8 @@ function createDiv(gridSize) {
     container.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
     container.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
   }
+
+createDiv();
 
 
 // Grid Custom Size
@@ -55,3 +43,15 @@ function handleGridSizeChange(){
     let containerWidth = gridSize * 40; // Can adjust width as needed;
     container.style.containerWidth = `${containerWidth}px`
 }
+
+
+
+// Hover Additional Class Addition
+let boxes = container.querySelectorAll("div.box")
+
+
+boxes.forEach((box) =>{
+  box.addEventListener("mouseover", (event)=>{
+    event.target.classList.add("change");
+  })
+});
